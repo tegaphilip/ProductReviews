@@ -13,5 +13,12 @@ namespace ProductReviews
         {
 
         }
+
+        protected void SignIn_Click(object sender, EventArgs e)
+        {
+            string mail = email.Text;
+            string pass = password.Text;
+            Response.Write(mail + " - " + pass );
+        }
     }
 }
