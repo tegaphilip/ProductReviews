@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ProductReviews.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Test Title</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/additions.css" />
+    <script src="/static/js/jquery-1.11.2.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="test">Project Review Portal</a>
+            </div>
+            <div>
+            </div>
+            <div>
+                <% if (true)
+                   { %>
+                <form method="post" runat="server" class="navbar-form form-inline pull-right">
+                    <asp:TextBox ID="email" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="password" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                    <asp:HiddenField ID="pageSuccess" runat="server" Text=""/>
+                    <asp:Button ID="SignIn" runat="server" CssClass="btn btn-default" Text="Login" />
+                </form>
+                <% }
+                   else
+                   { 
+			
+		%>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome Boy
+         
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="res">Blah blah</a></li>
+                            <li><a href="logout">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <asp:ContentPlaceHolder ID="Main" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>
