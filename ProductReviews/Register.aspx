@@ -6,7 +6,6 @@
     <div class="panel panel-primary">
         <div class="panel-heading">
             Create an Account
-		
         </div>
         <div class="panel-body">
             <form id="form1" runat="server">
