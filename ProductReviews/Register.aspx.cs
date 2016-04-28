@@ -13,5 +13,23 @@ namespace ProductReviews
         {
 
         }
+
+        protected void RegisterButton_Click(object sender, EventArgs e)
+        {
+            string em = email.Text;
+            string pass = password.Text;
+            string firstName = first_name.Text;
+            string lastName = last_name.Text;
+
+            DBConn db = new DBConn();
+            if (db.RegisterUser(em, pass, firstName, lastName))
+            {
+                Response.Redirect("Register.aspx?created=1");
+            }
+            else
+            {
+                Response.Redirect("Register.aspx?created=0&message=" + Util.Base64Encode(db.getErrorMessage()));
+            }
+        }
     }
 }

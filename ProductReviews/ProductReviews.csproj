@@ -57,8 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\reviews.mdf" />
+    <Content Include="App_Data\reviews_log.ldf">
+      <DependentUpon>reviews.mdf</DependentUpon>
+    </Content>
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Products.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="static\css\additions.css" />
     <Content Include="static\css\bootstrap-theme.css" />
@@ -75,11 +80,13 @@
     <Content Include="static\images\visa.png" />
     <Content Include="static\js\bootstrap.js" />
     <Content Include="static\js\bootstrap.min.js" />
+    <Content Include="static\js\datatables.min.js" />
     <Content Include="static\js\jquery-1.11.2.js" />
     <Content Include="static\js\npm.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,6 +100,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -109,6 +123,7 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="static\css\bootstrap-theme.css.map" />

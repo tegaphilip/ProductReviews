@@ -8,11 +8,28 @@
         </div>
         <div class="panel-body">
             <form id="form1" runat="server">
+
+                <%
+                    string error_message = Request.Params["error"];
+                    if (error_message != null)
+                    {
+                        Response.Write("<p class='alert-danger'>Invalid login details! <br>Please try again</p>");
+                    }
+                %>
+
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                    runat="server" ControlToValidate="email" ForeColor="Red"
+                    ErrorMessage="Email is Required" Display="Dynamic">
+                </asp:RequiredFieldValidator>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <asp:TextBox ID="email" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
 
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                    runat="server" ControlToValidate="password" ForeColor="Red"
+                    ErrorMessage="Password is Required" Display="Dynamic">
+                </asp:RequiredFieldValidator>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <asp:TextBox ID="password" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>

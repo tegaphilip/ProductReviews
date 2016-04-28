@@ -18,7 +18,31 @@ namespace ProductReviews
         {
             string mail = email.Text;
             string pass = password.Text;
-            Response.Write(mail + " - " + pass );
+            DBConn db = new DBConn();
+
+            Dictionary<String, String> userData = db.getUserByEmail(mail);
+
+            if (userData == null)
+            {
+                Response.Redirect("Login.aspx?error=true");
+            }
+            else
+            {
+                if (!Util.checkPasword(pass, userData["password"]))
+                {
+                    Response.Redirect("Login.aspx?error=true");
+                }
+                else
+                {
+                    Session["id"] = userData["id"];
+                    Session["email"] = userData["email"];
+                    Session["first_name"] = userData["first_name"];
+                    Session["last_name"] = userData["last_name"];
+                    Session["date_registered"] = userData["date_registered"];
+
+                    Response.Redirect("Products.aspx");
+                }
+            }
         }
     }
 }
