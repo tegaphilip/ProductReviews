@@ -18,7 +18,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="test">Project Review Portal</a>
+                <a class="navbar-brand" href="Products.aspx">Project Review Portal</a>
             </div>
             <div>
             </div>

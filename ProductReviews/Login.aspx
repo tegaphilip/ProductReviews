@@ -11,7 +11,12 @@
 
                 <%
                     string error_message = Request.Params["error"];
-                    if (error_message != null)
+                    string redirect_error = Request.Params["redirect_error"];
+                    if (redirect_error != null)
+                    {
+                        Response.Write("<p class='alert-danger'>" + redirect_error + "</p>");
+                    }
+                    else if (error_message != null)
                     {
                         Response.Write("<p class='alert-danger'>Invalid login details! <br>Please try again</p>");
                     }

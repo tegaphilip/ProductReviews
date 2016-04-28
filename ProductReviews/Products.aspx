@@ -41,7 +41,7 @@
                 %>
                 <tr>
                     <td><% Response.Write(projects[i][1]); %></td>
-                    <td><% Response.Write("<img width='100' height='100' src='" + projects[i][2] + "' />"); %></td>
+                    <td><% Response.Write("<img width='200' height='200' src='" + projects[i][2] + "' />"); %></td>
                     <td><% Response.Write(projects[i][3]); %></td>
                     <td><% Response.Write(projects[i][4]); %></td>
                     <td><a href="Product.aspx?Id=<% Response.Write(projects[i][0]); %>">View</a></td>
