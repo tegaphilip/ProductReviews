@@ -15,7 +15,7 @@ namespace ProductReviews
 
         private string lastErrorMessage = "An error occurred";
 
-        const string DB_PATH = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\t.oghenekohwo.15\\Documents\\visual studio 2013\\Projects\\ProductReviews\\ProductReviews\\App_Data\\reviews.mdf\";Integrated Security=True";
+        const string DB_PATH = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\thapa_000\\Documents\\Visual Studio 2013\\Projects\\ProductReviews\\ProductReviews\\App_Data\\reviews.mdf\";Integrated Security=True";
         //const string DB_PATH = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"C:\\Users\\t.oghenekohwo.15\\Documents\\visual studio 2013\\Projects\\ProductReviews\\ProductReviews\\App_Data\\reviews.mdf\";Integrated Security=True"; 
 
         public DBConn()
