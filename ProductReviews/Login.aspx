@@ -42,7 +42,8 @@
 
                 <div class="form-group">
                     <asp:Button ID="SignIn" runat="server" CssClass="btn btn-default" Text="Login" OnClick="SignIn_Click" />
-                    <asp:Button ID="Register" runat="server" CssClass="btn btn-default pull-right" Text="Sign Up" />
+                    <!--<asp:Button ID="Register" CssClass="btn btn-default pull-right" Text="Sign Up" />-->
+                    <a href="Register.aspx" class="btn btn-default pull-right">Sign Up</a>
                 </div>
             </form>
         </div>
